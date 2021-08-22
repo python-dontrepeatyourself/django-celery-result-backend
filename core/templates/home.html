@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Django Celery</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+        {% csrf_token %}
+        <p>Run task for: 
+          <input name="number" id="id_number" novalidate> seconds
+        </p>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+
+      <div class="mt-5">
+        <h2 class="title is-2">Tasks</h2>
+        <br>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Task ID</th>
+              <th>Task state</th>
+              <th>Task percentage %</th>
+              <th>Task info</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+    </script>
+  </body>
+</html>
