@@ -28,6 +28,7 @@ def send_email_task(email):
 def loop(self, l):
     "simulate a long-running task like export of data or generateing a report"
     for i in range(int(l)):
+        print(i)
         time.sleep(1)
         self.update_state(state='PROGRESS',
                           meta={'current': i, 'total': l})
