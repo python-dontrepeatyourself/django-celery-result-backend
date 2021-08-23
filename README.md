@@ -1,3 +1,3 @@
-# django-celery-rabbitmq
+# django-celery-result-backend
 
-This is the repository for the tutorial: https://dontrepeatyourself.org/post/asynchronous-tasks-in-django-with-celery-and-rabbitmq/
+This is the repository for the tutorial: https://dontrepeatyourself.org/post/django-celery-result-backend

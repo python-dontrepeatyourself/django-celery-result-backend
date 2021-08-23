@@ -1,5 +1,6 @@
 import time
 from celery import shared_task
+from mysite.celery import app
 
 from django.core.mail import send_mail
 
@@ -22,3 +23,13 @@ def send_email_task(email):
         [email], # to
         fail_silently=False
     )
+    
+@app.task(bind=True)
+def loop(self, l):
+    "simulate a long-running task like export of data or generateing a report"
+    for i in range(int(l)):
+        time.sleep(1)
+        self.update_state(state='PROGRESS',
+                          meta={'current': i, 'total': l})
+    print('Task completed')
+    return {'current': 100, 'total': 100, }
